@@ -28,8 +28,9 @@ if (localButton) {
         // Abre o Google Maps diretamente com o endereço
         // Adicione o endereço ou coordenadas do local da festa aqui
         // Você pode usar um endereço (exemplo: "Rua das Flores, 123, São Paulo") ou coordenadas (-23.5505, -46.6333)
-        const address = 'Av. prefeito joão batista stocco 1609'; // Altere para o endereço real
-        const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(address)}`;
+        // const address = ''; // Altere para o endereço real
+        //Para endereços variados https://www.google.com/maps/search/${encodeURIComponent(address)}
+        const mapsUrl = `https://maps.app.goo.gl/tkSBaLwJM69x7jpB9`;
         window.open(mapsUrl, '_blank');
     });
 }
@@ -44,8 +45,8 @@ if (confirmButton) {
     confirmButton.addEventListener('click', () => {
         // Se estamos na página de confirmação, redireciona para WhatsApp
             // Adicione seu número de telefone no formato: +55XXXXXXXXXXX (incluindo o código do país)
-            const phoneNumber = '+5543996637278'; // Exemplo: '+5511987654321'
-            const mensagem = "Oi! Gostaria de confirmar minha presença no convite! 🎉";
+            const phoneNumber = '+5541987930065'; // Exemplo: '+5511987654321'
+            const mensagem = "Oi! Gostaria de confirmar minha presença! 🎉";
             const whatsappUrl = phoneNumber 
                 ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensagem)}`
                 : `https://wa.me/?text=${encodeURIComponent(mensagem)}`;
