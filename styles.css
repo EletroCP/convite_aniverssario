@@ -1,0 +1,91 @@
+/* Desktop */
+@media (min-width: 1024px) {
+    header {
+        top: 65% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    main img {
+        width: 20%;
+    }
+
+    #navBar {
+        top: 80% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    #navBar img {
+        width: 65px;
+        margin: 0 15px;
+    }
+
+    #return {
+        top: 7% !important;
+        right: 49.5% !important;
+        font-size: 24px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        top: 55% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    main img {
+        width: 30%;
+    }
+
+    #navBar {
+        top: 75% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    #navBar img {
+        width: 55px;
+        margin: 0 10px;
+    }
+
+    #return {
+        top: 5% !important;
+        right: 5% !important;
+        font-size: 32px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    header {
+        top: 45% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    main img {
+        width: 60%;
+    }
+
+    #navBar {
+        top: 70% !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        display: flex !important;
+        gap: 10px;
+    }
+
+    #navBar img {
+        width: 45px;
+        margin: 0 5px;
+    }
+
+    #return {
+        top: 10px !important;
+        right: 10px !important;
+        font-size: 40px;
+    }
+}
