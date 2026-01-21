@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite aniverssário</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; overflow: hidden; z-index: -1;">
+        <video autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
+            <source src="res/lanterns/lanterns.mp4" type="video/mp4">
+        </video>
+    </div>
+    <header style="position: fixed; top: 65%; left: 50%; transform: translateX(-50%); z-index: 10; cursor: pointer;">
+        <img id="openButton" src="res/carta.png" style="cursor: pointer;" />
+    </header>
+    <main>
+        <p id="return" style="color: rgb(0, 255, 64); position: absolute; top: 7%; right: 49.5%; z-index: 100; font-size: 24px; font-weight: bold; cursor: pointer;">X</p>
+        <img id="mainContent" src="res/bandeiras/luisa.png" style="width: 20%; height: auto; display: block; margin: 0 auto; display: none;" />
+        <img id="giftContent" src="res/bandeiras/lista_presentes.png" style="width: 20%; height: auto; display: block; margin: 0 auto; display: none;" />
+        <img id="dressContent" src="res/bandeiras/codigo_de_vestimenta.png" style="width: 20%; height: auto; display: block; margin: 0 auto; display: none;" />
+    </main>
+    <nav id="navBar" style="position: fixed; top: 80%; left: 50%; transform: translateX(-50%); z-index: 10; display: none;">
+        <img id="confirmButton" src="res/botoes/presenca.png" style="cursor: pointer; margin: 0 15px; width: 65px;" /> 
+        <img id="localButton" src="res/botoes/local.png" style="cursor: pointer; margin: 0 15px; width: 65px;" />
+        <img id="giftButton" src="res/botoes/presente.png" style="cursor: pointer; margin: 0 15px; width: 65px;" /> 
+        <img id="dressButton" src="res/botoes/vestimenta.png" style="cursor: pointer; margin: 0 15px; width: 65px;" />  
+    </nav>
+</body>
+</html>
