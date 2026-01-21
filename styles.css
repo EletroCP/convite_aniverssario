@@ -71,11 +71,12 @@
     }
 
     #navBar {
-        top: 70% !important;
+        top: 80% !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
         display: flex !important;
         gap: 10px;
+        display: none;
     }
 
     #navBar img {
