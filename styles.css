@@ -49,6 +49,15 @@ main {
     z-index: 100;
     font-weight: bold;
     cursor: pointer;
+    display: none;
+}
+
+#muteButton {
+    color: rgb(0, 255, 64);
+    position: absolute;
+    z-index: 100;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* Header/Carta */
@@ -91,6 +100,12 @@ main {
         font-size: 24px;
     }
 
+    #muteButton {
+        top: 7%;
+        right: 55%;
+        font-size: 24px;
+    }
+
     #navBar {
         top: 80%;
         left: 50%;
@@ -118,6 +133,12 @@ main {
     #return {
         top: 5%;
         right: 5%;
+        font-size: 32px;
+    }
+
+    #muteButton {
+        top: 5%;
+        right: 10%;
         font-size: 32px;
     }
 
@@ -151,12 +172,18 @@ main {
         font-size: 40px;
     }
 
+    #muteButton {
+        top: 10px;
+        right: 60px;
+        font-size: 40px;
+    }
+
     #navBar {
         top: 85%;
         left: 50%;
         transform: translateX(-50%);
         display: none;
-        gap: 10px;
+        gap: 15px;
     }
 
     .navButton {
