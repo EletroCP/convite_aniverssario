@@ -23,7 +23,7 @@ if (openButton) {
         letterIsOpen = true;
         openButton.style.display = 'none';
         mainContent.style.display = 'block';
-        navBar.style.display = 'block';
+        navBar.style.display = 'flex';
     });
 }
 

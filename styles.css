@@ -142,7 +142,7 @@ main {
     }
 
     .mainImg {
-        width: 60%;
+        width: 54%;
     }
 
     #return {
@@ -152,10 +152,10 @@ main {
     }
 
     #navBar {
-        top: 70%;
+        top: 80%;
         left: 50%;
         transform: translateX(-50%);
-        display: flex !important;
+        display: none;
         gap: 10px;
     }
 
