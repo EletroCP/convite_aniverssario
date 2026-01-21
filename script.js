@@ -16,8 +16,9 @@ let isMuted = false;
 
 // Toca a música de fundo ao carregar a página
 if (bgMusic) {
-    bgMusic.volume = 0.3;
+    bgMusic.volume = 0.3; // Volume em 50%
     bgMusic.play().catch(() => {
+        // Se o autoplay falhar, tenta tocar ao primeiro clique do usuário
         document.addEventListener('click', () => {
             bgMusic.play();
         }, { once: true });
@@ -53,13 +54,6 @@ if (openButton) {
         openButton.style.display = 'none';
         mainContent.style.display = 'block';
         navBar.style.display = 'flex';
-        bgMusic.volume = 0.3; // Volume em 50%
-        bgMusic.play().catch(() => {
-        // Se o autoplay falhar, tenta tocar ao primeiro clique do usuário
-        document.addEventListener('click', () => {
-            bgMusic.play();
-        }, { once: true });
-    });
     });
 }
 
