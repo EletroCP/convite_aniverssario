@@ -1,25 +1,45 @@
 const openButton = document.getElementById('openButton');
-const homeButton = document.getElementById('homeButton');
+const dressButton = document.getElementById('dressButton');
 const localButton = document.getElementById('localButton');
 const giftButton = document.getElementById('giftButton');
 const confirmButton = document.getElementById('confirmButton');
 const mapsButton = document.getElementById('mapsButton');
+const navBar = document.getElementById('navBar');
+const mainContent = document.getElementById('mainContent');
+const giftContent = document.getElementById('giftContent');
+const dressContent = document.getElementById('dressContent');
+returnButton = document.getElementById('return');
 
+let letterIsOpen = false;
 // Detecta se estamos já dentro da pasta pages/
 const isInPages = window.location.pathname.includes('/pages/');
 const basePath = isInPages ? '' : 'pages/';
 const isConfirmPage = window.location.pathname.includes('confirm_presence');
 const isLocalPage = window.location.pathname.includes('local');
 
+
 if (openButton) {
     openButton.addEventListener('click', () => {
-        window.location.href = basePath + 'home.html';
+        letterIsOpen = true;
+        openButton.style.display = 'none';
+        mainContent.style.display = 'block';
+        navBar.style.display = 'block';
     });
 }
 
-if (homeButton) {
-    homeButton.addEventListener('click', () => {
-        window.location.href = basePath + 'home.html';
+if (returnButton) {
+    returnButton.addEventListener('click', () => {
+        mainContent.style.display = 'block';
+        giftContent.style.display = 'none';
+        dressContent.style.display = 'none';
+    });
+}
+
+if (dressButton) {
+    dressButton.addEventListener('click', () => {
+        mainContent.style.display = 'none'
+        giftContent.style.display = 'none';
+        dressContent.style.display = 'block';
     });
 }
 
@@ -37,7 +57,9 @@ if (localButton) {
 
 if (giftButton) {
     giftButton.addEventListener('click', () => {
-        window.location.href = basePath + 'gift_list.html';
+        mainContent.style.display = 'none'
+        dressContent.style.display = 'none';
+        giftContent.style.display = 'block';
     });
 }
 
