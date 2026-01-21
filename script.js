@@ -8,7 +8,36 @@ const navBar = document.getElementById('navBar');
 const mainContent = document.getElementById('mainContent');
 const giftContent = document.getElementById('giftContent');
 const dressContent = document.getElementById('dressContent');
+const bgMusic = document.getElementById('bgMusic');
+const muteButton = document.getElementById('muteButton');
 returnButton = document.getElementById('return');
+
+let isMuted = false;
+
+// Toca a música de fundo ao carregar a página
+if (bgMusic) {
+    bgMusic.volume = 0.3;
+    bgMusic.play().catch(() => {
+        document.addEventListener('click', () => {
+            bgMusic.play();
+        }, { once: true });
+    });
+}
+
+// Função de mute/unmute
+if (muteButton) {
+    muteButton.addEventListener('click', () => {
+        if (isMuted) {
+            bgMusic.muted = false;
+            muteButton.textContent = 'M';
+            isMuted = false;
+        } else {
+            bgMusic.muted = true;
+            muteButton.textContent = '🔇';
+            isMuted = true;
+        }
+    });
+}
 
 let letterIsOpen = false;
 // Detecta se estamos já dentro da pasta pages/
@@ -24,6 +53,13 @@ if (openButton) {
         openButton.style.display = 'none';
         mainContent.style.display = 'block';
         navBar.style.display = 'flex';
+        bgMusic.volume = 0.3; // Volume em 50%
+        bgMusic.play().catch(() => {
+        // Se o autoplay falhar, tenta tocar ao primeiro clique do usuário
+        document.addEventListener('click', () => {
+            bgMusic.play();
+        }, { once: true });
+    });
     });
 }
 
