@@ -136,13 +136,13 @@ main {
 /* Mobile */
 @media (max-width: 767px) {
     #cartaHeader {
-        top: 45%;
+        top: 60%;
         left: 50%;
         transform: translateX(-50%);
     }
 
     .mainImg {
-        width: 54%;
+        width: 70%;
     }
 
     #return {
@@ -152,7 +152,7 @@ main {
     }
 
     #navBar {
-        top: 80%;
+        top: 85%;
         left: 50%;
         transform: translateX(-50%);
         display: none;
@@ -160,7 +160,7 @@ main {
     }
 
     .navButton {
-        width: 45px;
+        width: 55px;
         margin: 0 5px;
     }
 }
