@@ -30,11 +30,11 @@ if (muteButton) {
     muteButton.addEventListener('click', () => {
         if (isMuted) {
             bgMusic.muted = false;
-            muteButton.textContent = 'M';
+            muteButton.src = 'res/botoes/pause.png';
             isMuted = false;
         } else {
             bgMusic.muted = true;
-            muteButton.textContent = '🔇';
+            muteButton.src = 'res/botoes/play.png';
             isMuted = true;
         }
     });
@@ -62,6 +62,7 @@ if (returnButton) {
         mainContent.style.display = 'block';
         giftContent.style.display = 'none';
         dressContent.style.display = 'none';
+        returnButton.style.display = 'none';
     });
 }
 
@@ -70,6 +71,7 @@ if (dressButton) {
         mainContent.style.display = 'none'
         giftContent.style.display = 'none';
         dressContent.style.display = 'block';
+        returnButton.style.display = 'block';
     });
 }
 
@@ -90,6 +92,7 @@ if (giftButton) {
         mainContent.style.display = 'none'
         dressContent.style.display = 'none';
         giftContent.style.display = 'block';
+        returnButton.style.display = 'block';
     });
 }
 
