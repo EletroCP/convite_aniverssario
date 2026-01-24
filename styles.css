@@ -95,15 +95,15 @@ main {
     }
 
     #return {
-        top: 7%;
-        right: 49.5%;
-        font-size: 24px;
+        top: 15%;
+        right: 34%;
+        width: 55px;
     }
 
     #muteButton {
-        top: 7%;
-        right: 55%;
-        font-size: 24px;
+        top: 2%;
+        right: 34%;
+        width: 65px;
     }
 
     #navBar {
@@ -167,15 +167,15 @@ main {
     }
 
     #return {
-        top: 10px;
-        right: 10px;
-        font-size: 40px;
+        top: 90px;
+        right: 20px;
+        width: 15%;
     }
 
     #muteButton {
-        top: 10px;
-        right: 60px;
-        font-size: 40px;
+        top: 15px;
+        right: 20px;
+        width: 15%;
     }
 
     #navBar {
