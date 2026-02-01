@@ -229,7 +229,7 @@ main {
 /* Mobile */
 @media (max-width: 767px) {
     #cartaHeader {
-        top: 80%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
         width: 150px;
@@ -256,7 +256,7 @@ main {
     }
 
     .mainImg {
-        margin: 50px auto;
+        margin: 30px auto;
         width: 70%;
     }
 
