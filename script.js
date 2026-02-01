@@ -149,3 +149,4 @@ if (listLink) {
         const listUrl = 'https://happygiftlist.com/pt/lista-de-desejos/l711a5y5';
         window.open(listUrl, '_blank');
     });
+}
