@@ -29,7 +29,6 @@ if(backgroundVideo) {
             mainContent.style.display = 'block';
             navBar.style.display = 'flex';
             backgroundVideo.style.display = 'none';
-            muteButton.style.top = '-30px';
         }, 4000);
     }, {once: true});
 }
