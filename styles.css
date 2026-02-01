@@ -229,7 +229,7 @@ main {
 /* Mobile */
 @media (max-width: 767px) {
     #cartaHeader {
-        top: 70%;
+        top: 80%;
         left: 50%;
         transform: translateX(-50%);
         width: 150px;
