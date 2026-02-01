@@ -288,7 +288,7 @@ main {
     #pixButon {
         width: 46%;
         position: absolute;
-        top: 53%;
+        top: 56%;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -296,7 +296,7 @@ main {
     #listLink {
         width: 53%;
         position: absolute;
-        top: 48%;
+        top: 53%;
         left: 50%;
         transform: translateX(-50%);
     }
