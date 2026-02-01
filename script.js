@@ -1,4 +1,5 @@
 const openButton = document.getElementById('openButton');
+const cartaVideo = document.getElementById('cartaVideo');
 const dressButton = document.getElementById('dressButton');
 const localButton = document.getElementById('localButton');
 const giftButton = document.getElementById('giftButton');
@@ -10,9 +11,28 @@ const giftContent = document.getElementById('giftContent');
 const dressContent = document.getElementById('dressContent');
 const bgMusic = document.getElementById('bgMusic');
 const muteButton = document.getElementById('muteButton');
+const backgroundVideo = document.getElementById('backgroundVideo');
+const pixButton = document.getElementById('pixButon');
+const listLink = document.getElementById('listLink');
+
+
 returnButton = document.getElementById('return');
 
 let isMuted = false;
+
+if(backgroundVideo) {
+    document.addEventListener('click', () => {
+        backgroundVideo.play();
+
+        setTimeout(() => {
+            cartaVideo.style.display = 'none';
+            mainContent.style.display = 'block';
+            navBar.style.display = 'flex';
+            backgroundVideo.style.display = 'none';
+            muteButton.style.top = '-30px';
+        }, 4000);
+    }, {once: true});
+}
 
 // Toca a música de fundo ao carregar a página
 if (bgMusic) {
@@ -30,36 +50,27 @@ if (muteButton) {
     muteButton.addEventListener('click', () => {
         if (isMuted) {
             bgMusic.muted = false;
-            muteButton.src = 'res/botoes/pause.png';
+            muteButton.src = 'res/botoes/play.png';
             isMuted = false;
         } else {
             bgMusic.muted = true;
-            muteButton.src = 'res/botoes/play.png';
+            muteButton.src = 'res/botoes/pause.png';
             isMuted = true;
         }
     });
 }
 
 let letterIsOpen = false;
-// Detecta se estamos já dentro da pasta pages/
 const isInPages = window.location.pathname.includes('/pages/');
 const basePath = isInPages ? '' : 'pages/';
 const isConfirmPage = window.location.pathname.includes('confirm_presence');
 const isLocalPage = window.location.pathname.includes('local');
 
-
-if (openButton) {
-    openButton.addEventListener('click', () => {
-        letterIsOpen = true;
-        openButton.style.display = 'none';
-        mainContent.style.display = 'block';
-        navBar.style.display = 'flex';
-    });
-}
-
 if (returnButton) {
     returnButton.addEventListener('click', () => {
         mainContent.style.display = 'block';
+        pixButton.style.display = 'none';
+        listLink.style.display = 'none';
         giftContent.style.display = 'none';
         dressContent.style.display = 'none';
         returnButton.style.display = 'none';
@@ -70,6 +81,8 @@ if (dressButton) {
     dressButton.addEventListener('click', () => {
         mainContent.style.display = 'none'
         giftContent.style.display = 'none';
+        pixButton.style.display = 'none';
+        listLink.style.display = 'none';
         dressContent.style.display = 'block';
         returnButton.style.display = 'block';
     });
@@ -91,6 +104,8 @@ if (giftButton) {
     giftButton.addEventListener('click', () => {
         mainContent.style.display = 'none'
         dressContent.style.display = 'none';
+        pixButton.style.display = 'block';
+        listLink.style.display = 'block';
         giftContent.style.display = 'block';
         returnButton.style.display = 'block';
     });
@@ -117,4 +132,14 @@ if (mapsButton) {
         const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(address)}`;
         window.open(mapsUrl, '_blank');
     });
+}
+
+if (pixButton) {
+    pixButton.addEventListener('click', () => {
+        // Copia para a area de transferência o código do Pix
+        const pixCode = '00020126360014BR.GOV.BCB.PIX0136br.nfse.62070703c1d4-6f7e-4f5d-8c3e-9e4b8e8e5f3d5204000053039865802BR5925Luisa Maria de Jesus6009Curitiba61080540900062070503***63041D3D';
+        navigator.clipboard.writeText(pixCode).then(() => {
+            alert('Código Pix copiado para a área de transferência!');
+        });
+    })
 }
