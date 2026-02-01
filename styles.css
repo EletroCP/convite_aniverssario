@@ -8,6 +8,7 @@
 html, body {
     width: 100%;
     height: 100%;
+    overflow: visible;
 }
 
 /* Video Background */
@@ -19,9 +20,18 @@ html, body {
     height: 100%;
     overflow: hidden;
     z-index: -1;
+    background-color: black;
 }
 
 #backgroundVideo {
+    margin-left: 30%;
+    width: 45%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+#backgroundVideo2 {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -65,9 +75,18 @@ main {
     position: fixed;
     z-index: 10;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #openButton {
+    cursor: pointer;
+}
+
+#cartaVideo {
+    position: fixed;
+    display: none;
     cursor: pointer;
 }
 
@@ -78,6 +97,11 @@ main {
     display: none;
 }
 
+.linksButton {
+    cursor: pointer;
+    display: none;
+}
+
 .navButton {
     cursor: pointer;
 }
@@ -85,9 +109,26 @@ main {
 /* Desktop */
 @media (min-width: 1024px) {
     #cartaHeader {
-        top: 65%;
+        top: 70%;
         left: 50%;
         transform: translateX(-50%);
+        width: 20%;
+        overflow: visible;
+    }
+
+    #openButton {
+        width: 100%;
+        height: 100%;
+    }
+
+    #cartaVideo {
+        position: fixed;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 20vw;
+        height: auto;
+        z-index: 50;
     }
 
     .mainImg {
@@ -116,6 +157,22 @@ main {
         width: 65px;
         margin: 0 15px;
     }
+
+    #pixButon {
+        width: 13%;
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #listLink {
+        width: 19%;
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 /* Tablet */
@@ -124,6 +181,21 @@ main {
         top: 55%;
         left: 50%;
         transform: translateX(-50%);
+        width: 200px;
+        height: 280px;
+    }
+
+    #openButton {
+        width: 100%;
+        height: 100%;
+    }
+
+    #cartaVideo {
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 25vw;
+        height: auto;
     }
 
     .mainImg {
@@ -160,20 +232,42 @@ main {
         top: 70%;
         left: 50%;
         transform: translateX(-50%);
+        width: 150px;
+        height: 210px;
+    }
+
+    #openButton {
+        width: 100%;
+        height: 100%;
+    }
+
+    #cartaVideo {
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%);
+
+    }
+
+    #backgroundVideo {
+        margin-left: 0;
+        width: 100%;
+        object-fit: cover;
+        display: block;
     }
 
     .mainImg {
+        margin: 50px auto;
         width: 70%;
     }
 
     #return {
-        top: 85px;
+        top: 35px;
         right: 5px;
         width: 13%;
     }
 
     #muteButton {
-        top: 10px;
+        top: 20px;
         right: 5px;
         width: 13%;
     }
@@ -189,5 +283,21 @@ main {
     .navButton {
         width: 65px;
         margin: 0 5px;
+    }
+
+    #pixButon {
+        width: 46%;
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #listLink {
+        width: 70%;
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
