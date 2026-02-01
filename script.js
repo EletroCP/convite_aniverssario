@@ -137,9 +137,15 @@ if (mapsButton) {
 if (pixButton) {
     pixButton.addEventListener('click', () => {
         // Copia para a area de transferência o código do Pix
-        const pixCode = '00020126360014BR.GOV.BCB.PIX0136br.nfse.62070703c1d4-6f7e-4f5d-8c3e-9e4b8e8e5f3d5204000053039865802BR5925Luisa Maria de Jesus6009Curitiba61080540900062070503***63041D3D';
+        const pixCode = '41992092118';
         navigator.clipboard.writeText(pixCode).then(() => {
             alert('Código Pix copiado para a área de transferência!');
         });
     })
 }
+
+if (listLink) {
+    listLink.addEventListener('click', () => {
+        const listUrl = 'https://happygiftlist.com/pt/lista-de-desejos/l711a5y5';
+        window.open(listUrl, '_blank');
+    });
