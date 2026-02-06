@@ -145,7 +145,7 @@ if (pixButton) {
 
 if (listLink) {
     listLink.addEventListener('click', () => {
-        const listUrl = 'https://happygiftlist.com/pt/lista-de-desejos/l711a5y5';
+        const listUrl = 'https://happygiftlist.com/pt/lista-de-desejos/qj3tzqmn';
         window.open(listUrl, '_blank');
     });
 }
