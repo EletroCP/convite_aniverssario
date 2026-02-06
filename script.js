@@ -20,18 +20,36 @@ returnButton = document.getElementById('return');
 
 let isMuted = false;
 
-if(backgroundVideo) {
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+  }, 1000); // delay de 1 segundo
+});
+
+
+if (backgroundVideo && backgroundVideo2) {
     document.addEventListener('click', () => {
         backgroundVideo.play();
 
         setTimeout(() => {
-            cartaVideo.style.display = 'none';
-            mainContent.style.display = 'block';
-            navBar.style.display = 'flex';
-            backgroundVideo.style.display = 'none';
-        }, 4000);
-    }, {once: true});
+            // Inicia o fade-out do primeiro vídeo
+            backgroundVideo.style.opacity = 0;
+
+            // Após o fade-out, esconde e inicia o vídeo de fundo
+            setTimeout(() => {
+                backgroundVideo.style.display = 'none';
+                backgroundVideo2.style.opacity = 1; // fade-in suave
+                backgroundVideo2.play();
+
+                // Mostra o conteúdo principal
+                cartaVideo.style.display = 'none';
+                mainContent.style.display = 'block';
+                navBar.style.display = 'flex';
+            }, 500); // tempo do fade-out
+        }, 4000); // tempo até começar a transição
+    }, { once: true });
 }
+
 
 // Toca a música de fundo ao carregar a página
 if (bgMusic) {
