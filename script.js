@@ -12,6 +12,8 @@ const dressContent = document.getElementById('dressContent');
 const bgMusic = document.getElementById('bgMusic');
 const muteButton = document.getElementById('muteButton');
 const backgroundVideo = document.getElementById('backgroundVideo');
+const backgroundVideo2 = document.getElementById('backgroundVideo2');
+const bgImage = document.getElementById('bgImage');
 const pixButton = document.getElementById('pixButon');
 const listLink = document.getElementById('listLink');
 
@@ -27,26 +29,34 @@ window.addEventListener('load', () => {
 });
 
 
-if (backgroundVideo && backgroundVideo2) {
+if (backgroundVideo && backgroundVideo2 && bgImage) {
     document.addEventListener('click', () => {
-        backgroundVideo.play();
+        // Inicia o fade-out da imagem de fundo
+        bgImage.style.opacity = 0;
 
         setTimeout(() => {
-            // Inicia o fade-out do primeiro vídeo
-            backgroundVideo.style.opacity = 0;
+            // Esconde a imagem
+            bgImage.style.display = 'none';
+            // Inicia o primeiro vídeo
+            backgroundVideo.play();
 
-            // Após o fade-out, esconde e inicia o vídeo de fundo
             setTimeout(() => {
-                backgroundVideo.style.display = 'none';
-                backgroundVideo2.style.opacity = 1; // fade-in suave
-                backgroundVideo2.play();
+                // Inicia o fade-out do primeiro vídeo
+                backgroundVideo.style.opacity = 0;
 
-                // Mostra o conteúdo principal
-                cartaVideo.style.display = 'none';
-                mainContent.style.display = 'block';
-                navBar.style.display = 'flex';
-            }, 500); // tempo do fade-out
-        }, 4000); // tempo até começar a transição
+                // Após o fade-out, esconde e inicia o vídeo de fundo
+                setTimeout(() => {
+                    backgroundVideo.style.display = 'none';
+                    backgroundVideo2.style.opacity = 1; // fade-in suave
+                    backgroundVideo2.play();
+
+                    // Mostra o conteúdo principal
+                    cartaVideo.style.display = 'none';
+                    mainContent.style.display = 'block';
+                    navBar.style.display = 'flex';
+                }, 500); // tempo do fade-out
+            }, 4000); // tempo até começar a transição
+        }, 800); // tempo do fade-out da imagem
     }, { once: true });
 }
 
