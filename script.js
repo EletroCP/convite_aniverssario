@@ -107,12 +107,7 @@ if (dressButton) {
 
 if (localButton) {
     localButton.addEventListener('click', () => {
-        // Abre o Google Maps diretamente com o endereço
-        // Adicione o endereço ou coordenadas do local da festa aqui
-        // Você pode usar um endereço (exemplo: "Rua das Flores, 123, São Paulo") ou coordenadas (-23.5505, -46.6333)
-        // const address = ''; // Altere para o endereço real
-        //Para endereços variados https://www.google.com/maps/search/${encodeURIComponent(address)}
-        const mapsUrl = `https://maps.app.goo.gl/tkSBaLwJM69x7jpB9`;
+        const mapsUrl = config.googleMapsUrl;
         window.open(mapsUrl, '_blank');
     });
 }
@@ -131,8 +126,7 @@ if (giftButton) {
 if (confirmButton) {
     confirmButton.addEventListener('click', () => {
         // Se estamos na página de confirmação, redireciona para WhatsApp
-            // Adicione seu número de telefone no formato: +55XXXXXXXXXXX (incluindo o código do país)
-            const phoneNumber = '+5541987930065'; // Exemplo: '+5511987654321'
+            const phoneNumber = config.whatsappPhone;
             const mensagem = "Oi! Gostaria de confirmar minha presença! 🎉";
             const whatsappUrl = phoneNumber 
                 ? `https://wa.me/${phoneNumber}?text=${encodeURIComponent(mensagem)}`
@@ -143,9 +137,7 @@ if (confirmButton) {
 
 if (mapsButton) {
     mapsButton.addEventListener('click', () => {
-        // Adicione o endereço ou coordenadas do local da festa aqui
-        // Você pode usar um endereço (exemplo: "Rua das Flores, 123, São Paulo") ou coordenadas (-23.5505, -46.6333)
-        const address = 'Av. Prefeito jão batista stocco, 1609'; // Altere para o endereço real
+        const address = config.locationAddress;
         const mapsUrl = `https://www.google.com/maps/search/${encodeURIComponent(address)}`;
         window.open(mapsUrl, '_blank');
     });
@@ -154,7 +146,7 @@ if (mapsButton) {
 if (pixButton) {
     pixButton.addEventListener('click', () => {
         // Copia para a area de transferência o código do Pix
-        const pixCode = '41992092118';
+        const pixCode = config.pixCode;
         navigator.clipboard.writeText(pixCode).then(() => {
             alert('Código Pix copiado para a área de transferência!');
         });
@@ -163,7 +155,7 @@ if (pixButton) {
 
 if (listLink) {
     listLink.addEventListener('click', () => {
-        const listUrl = 'https://happygiftlist.com/pt/lista-de-desejos/qj3tzqmn';
+        const listUrl = config.giftListUrl;
         window.open(listUrl, '_blank');
     });
 }
