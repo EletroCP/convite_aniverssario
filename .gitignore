@@ -1,16 +1,3 @@
-# Variáveis de ambiente
-.env
-.env*
-.env.local
-.env.*.local
-
-# Arquivos gerados pelo build
-config.js
-
-# Node modules (se usar npm/bundler)
-node_modules/
-package-lock.json
-yarn.lock
 
 # IDE
 .vscode/
